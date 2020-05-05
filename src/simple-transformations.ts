@@ -84,3 +84,15 @@ export class ComplementTransformer extends Transformation {
     }
 }
 
+export class ReverseComplementTransformer extends Transformation {
+    getCommandName(): string {
+        return "reverse_complement";
+    }
+    
+    transform(input: string, cb: (output: string) => void): void {
+        let reversed = reverse_string(input);
+        let rev_comp = complement_dna(reversed)
+        
+        cb(rev_comp);
+    }
+}

@@ -37,6 +37,10 @@
 			{
 				"command": "complement",
 				"title": "Complement DNA"
+			},
+			{
+				"command": "reverse_complement",
+				"title": "Reverse complement DNA"
 			}
 		]
 	},
