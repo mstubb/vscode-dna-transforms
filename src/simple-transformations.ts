@@ -96,3 +96,15 @@ export class ReverseComplementTransformer extends Transformation {
         cb(rev_comp);
     }
 }
+
+export class RemoveLineBreakTransformer extends Transformation {
+    getCommandName(): string {
+        return "remove_line_breaks";
+    }
+    
+    transform(input: string, cb: (output: string) => void): void {
+        let joined = input.replace(/\n/g, "");
+        
+        cb(joined);
+    }
+}

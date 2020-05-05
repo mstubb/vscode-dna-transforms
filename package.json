@@ -41,6 +41,10 @@
 			{
 				"command": "reverse_complement",
 				"title": "Reverse complement DNA"
+			},
+			{
+				"command": "remove_line_breaks",
+				"title": "Remove line breaks"
 			}
 		]
 	},
