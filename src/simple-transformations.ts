@@ -1,5 +1,22 @@
 import Transformation from "./transformation";
 
+function reverse_string (str) {
+    var splitString = str.split("");
+    var reverseArray = splitString.reverse();
+    var joinArray = reverseArray.join("");
+    return joinArray;
+}
+
+function complement_dna(dna){
+    function matchBase(match, offset, string) {
+      const base = { 'A': 'T', 'T': 'A', 'G': 'C', 'C': 'G', 'a': 't', 't': 'a', 'g': 'c', 'c': 'g',
+                     'W':'W', 'S':'S', 'M':'K', 'K':'M', 'R':'Y', 'Y':'R', 'w':'w', 's':'s', 'm':'k', 'k':'m', 'r':'y', 'y':'r',
+                     'B':'V', 'D':'H', 'H':'D', 'V':'B', 'N':'N', 'Z':'Z', 'b':'v', 'd':'h', 'h':'d', 'v':'b', 'n':'n', 'z':'z'};
+      return `${base[match]}`;
+    }
+    return dna.replace(/[ATGCWSMKRYBDHVNZatgcwsmkrybdhvnz]/g, matchBase);
+  };
+
 export class UppercaseTransformer extends Transformation {
     getCommandName(): string {
         return "uppercase";
@@ -46,3 +63,14 @@ export class CapitalcaseTransformer extends Transformation {
         cb(newString);
     }
 }
+
+export class ReverseTransformer extends Transformation {
+    getCommandName(): string {
+        return "reverse";
+    }
+    
+    transform(input: string, cb: (output: string) => void): void {
+        cb(reverse_string(input));
+    }
+}
+

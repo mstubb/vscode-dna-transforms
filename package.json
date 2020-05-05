@@ -17,21 +17,25 @@
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "commands": [
-            {
-                "command": "uppercase",
-                "title": "To uppercase"
-            },
-            {
-                "command": "lowercase",
-                "title": "To lowercase"
-            },
-            {
-                "command": "capitalcase",
-                "title": "To capitalcase"
-            }
-        ]
-    },
+		"commands": [
+			{
+				"command": "uppercase",
+				"title": "To uppercase"
+			},
+			{
+				"command": "lowercase",
+				"title": "To lowercase"
+			},
+			{
+				"command": "capitalcase",
+				"title": "To capitalcase"
+			},
+			{
+				"command": "reverse",
+				"title": "Reverse string"
+			}
+		]
+	},
     "scripts": {
         "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
         "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
