@@ -1,14 +1,14 @@
 {
-    "name": "text-transform",
-    "displayName": "TextTransform",
-    "description": "A simple extension to apply simple transformations (like 'to uppercase', 'to lowercase') to currently selected text",
+    "name": "dna-transforms",
+    "displayName": "DNATransforms",
+    "description": "An extension providing simple DNA sequence transformations",
     "version": "0.1.0",
-    "publisher": "florianloch",
+    "publisher": "mstubb",
     "engines": {
         "vscode": "^1.0.0"
     },
     "license": "MIT",
-    "repository": "https://github.com/FlorianLoch/vscode-text-transform",
+    "repository": "https://github.com/mstubb/vscode-dna-transforms",
     "categories": [
         "Other"
     ],
