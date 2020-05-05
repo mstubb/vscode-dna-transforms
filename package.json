@@ -33,6 +33,10 @@
 			{
 				"command": "reverse",
 				"title": "Reverse string"
+			},
+			{
+				"command": "complement",
+				"title": "Complement DNA"
 			}
 		]
 	},

@@ -74,3 +74,13 @@ export class ReverseTransformer extends Transformation {
     }
 }
 
+export class ComplementTransformer extends Transformation {
+    getCommandName(): string {
+        return "complement";
+    }
+    
+    transform(input: string, cb: (output: string) => void): void {
+        cb(complement_dna(input));
+    }
+}
+

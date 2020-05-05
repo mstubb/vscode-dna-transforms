@@ -1,12 +1,13 @@
 import {ExtensionContext, window, commands, Selection, Range, TextEditorEdit} from "vscode";
 import Transformation from "./transformation";
-import {UppercaseTransformer, LowercaseTransformer, CapitalcaseTransformer, ReverseTransformer} from "./simple-transformations";
+import {UppercaseTransformer, LowercaseTransformer, CapitalcaseTransformer, ReverseTransformer, ComplementTransformer} from "./simple-transformations";
 
 export const transformers = new Array<Transformation>();
 transformers.push(new UppercaseTransformer());
 transformers.push(new LowercaseTransformer());
 transformers.push(new CapitalcaseTransformer());
 transformers.push(new ReverseTransformer());
+transformers.push(new ComplementTransformer());
 
 //transformers.push(new ComplementTransformer());
 //transformers.push(new RevComplementTransformer());
